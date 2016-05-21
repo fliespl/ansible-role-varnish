@@ -29,7 +29,7 @@
   when: ansible_os_family == 'Debian' and (ansible_distribution_release == "jessie" or "xenial")
   notify:
     - reload systemd
-    - restart foo
+    - restart varnish
 
 - name: Copy Varnish configuration (systemd).
   template:
